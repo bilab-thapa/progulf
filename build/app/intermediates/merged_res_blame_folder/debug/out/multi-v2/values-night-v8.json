@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/progulf/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/progulf/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
