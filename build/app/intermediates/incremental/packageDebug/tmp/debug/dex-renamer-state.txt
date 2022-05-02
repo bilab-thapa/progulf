@@ -1,4 +1,0 @@
-#Mon May 02 16:16:07 NPT 2022
-base.0=/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
