@@ -105,7 +105,9 @@ class _RegisterState extends State<Register> {
                         height: height * 0.07,
                         width: width * 0.7,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).pushNamed('/home');
+                          },
                           child: Text(
                             'Register',
                             style: TextStyle(color: Colors.white, fontSize: 20),
