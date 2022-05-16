@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatefulWidget {
-  Login({Key? key}) : super(key: key);
+class Register extends StatefulWidget {
+  Register({Key? key}) : super(key: key);
 
   @override
-  State<Login> createState() => _LoginState();
+  State<Register> createState() => _RegisterState();
 }
 
-class _LoginState extends State<Login> {
+class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -21,7 +21,7 @@ class _LoginState extends State<Login> {
               children: [
                 SizedBox(height: height * 0.07),
                 Text(
-                  'Sign In',
+                  'Register',
                   style: TextStyle(
                       color: Colors.deepOrange,
                       fontSize: 38,
@@ -29,7 +29,7 @@ class _LoginState extends State<Login> {
                 ),
                 const SizedBox(height: 50),
                 Container(
-                  height: height * 0.4,
+                  height: height * 0.41,
                   width: width * 0.8,
                   decoration: BoxDecoration(
                     color: Color(0xffE0FBFC),
@@ -44,7 +44,7 @@ class _LoginState extends State<Login> {
                           CircleAvatar(
                             backgroundColor: Color(0xffFF5733),
                             child: Icon(
-                              Icons.person,
+                              Icons.email,
                               color: Colors.white,
                             ),
                           ),
@@ -58,7 +58,28 @@ class _LoginState extends State<Login> {
                           ),
                         ],
                       ),
-                      SizedBox(height: height * 0.04),
+                      SizedBox(height: height * 0.02),
+                      Row(
+                        children: [
+                          SizedBox(width: width * 0.02),
+                          CircleAvatar(
+                            backgroundColor: Color(0xffFF5733),
+                            child: Icon(
+                              Icons.person,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(width: width * 0.04),
+                          Expanded(
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                hintText: 'Name',
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: height * 0.02),
                       Row(
                         children: [
                           SizedBox(width: width * 0.02),
@@ -79,14 +100,14 @@ class _LoginState extends State<Login> {
                           ),
                         ],
                       ),
-                      SizedBox(height: height * 0.07),
+                      SizedBox(height: height * 0.04),
                       SizedBox(
                         height: height * 0.07,
                         width: width * 0.7,
                         child: ElevatedButton(
                           onPressed: () {},
                           child: Text(
-                            'Sign In',
+                            'Register',
                             style: TextStyle(color: Colors.white, fontSize: 20),
                           ),
                           style: ElevatedButton.styleFrom(
@@ -101,22 +122,13 @@ class _LoginState extends State<Login> {
                     ],
                   ),
                 ),
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Forgot Password?',
-                    style: TextStyle(
-                      color: Colors.indigo,
-                      fontSize: 16,
-                    ),
-                  ),
-                ),
+                SizedBox(height: height * 0.04),
                 TextButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed('/register');
+                    Navigator.of(context).pushNamed('/login');
                   },
                   child: Text(
-                    'New around here? Register',
+                    'Already have an account? Login',
                     style: TextStyle(
                       color: Colors.indigo,
                       fontSize: 16,
@@ -125,7 +137,7 @@ class _LoginState extends State<Login> {
                 ),
                 SizedBox(height: height * 0.04),
                 Text(
-                  'Login with',
+                  'Register with',
                   style: TextStyle(
                       color: Colors.deepOrange,
                       fontSize: 18,
