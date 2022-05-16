@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:progulf/screens/home_screen.dart';
 
 class Category extends StatefulWidget {
   Category({Key? key}) : super(key: key);
@@ -9,16 +8,20 @@ class Category extends StatefulWidget {
 }
 
 class _CategoryState extends State<Category> {
+  var size, height, width;
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
+    height = size.height;
+    width = size.width;
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
           SizedBox(width: 10),
           Container(
-            height: 110,
-            width: 110,
+            height: height * 0.15,
+            width: width * 0.3,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(60),
               color: Colors.red,
@@ -33,8 +36,8 @@ class _CategoryState extends State<Category> {
           ),
           SizedBox(width: 10),
           Container(
-            height: 110,
-            width: 110,
+            height: height * 0.15,
+            width: width * 0.3,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(60),
               color: Colors.red,
@@ -49,8 +52,8 @@ class _CategoryState extends State<Category> {
           ),
           SizedBox(width: 10),
           Container(
-            height: 110,
-            width: 110,
+            height: height * 0.15,
+            width: width * 0.3,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(60),
               color: Colors.red,
@@ -65,8 +68,8 @@ class _CategoryState extends State<Category> {
           ),
           SizedBox(width: 10),
           Container(
-            height: 110,
-            width: 110,
+            height: height * 0.15,
+            width: width * 0.3,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(60),
               color: Colors.red,
@@ -81,8 +84,8 @@ class _CategoryState extends State<Category> {
           ),
           SizedBox(width: 10),
           Container(
-            height: 110,
-            width: 110,
+            height: height * 0.15,
+            width: width * 0.3,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(60),
               color: Colors.red,
@@ -97,8 +100,8 @@ class _CategoryState extends State<Category> {
           ),
           SizedBox(width: 10),
           Container(
-            height: 110,
-            width: 110,
+            height: height * 0.15,
+            width: width * 0.3,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(60),
               color: Colors.red,

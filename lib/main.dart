@@ -5,9 +5,9 @@ import 'package:progulf/screens/login.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: '/',
+    initialRoute: '/login',
     routes: {
-      '/': ((context) => const HomeScreen()),
+      '/': ((context) => HomeScreen()),
       '/login': ((context) => Login()),
     },
   ));

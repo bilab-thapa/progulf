@@ -3,10 +3,14 @@ import 'package:progulf/widgets/categories.dart';
 import 'package:progulf/widgets/product.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  var size, height, width;
 
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
+    height = size.height;
+    width = size.width;
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -24,7 +28,7 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               child: Container(
-                height: 55,
+                height: height * 0.06,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
@@ -52,7 +56,7 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(10),
               child: Container(
-                height: 160,
+                height: height * 0.15,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
@@ -70,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                               fontSize: 30,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: 15),
                         Text(
                           "What are you looking for today?",
                           style: TextStyle(
