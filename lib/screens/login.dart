@@ -104,7 +104,9 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/forgot');
+                  },
                   child: Text(
                     'Forgot Password?',
                     style: TextStyle(
