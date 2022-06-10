@@ -142,7 +142,7 @@ class _LoginState extends State<Login> {
                       Navigator.of(context).pushNamed('/register');
                     },
                     child: Text(
-                      'New around here? Register',
+                      'New around here? Join Us',
                       style: TextStyle(
                         color: Colors.indigo,
                         fontSize: 16,
@@ -150,26 +150,6 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   SizedBox(height: height * 0.04),
-                  Text(
-                    'Login with',
-                    style: TextStyle(
-                        color: Colors.deepOrange,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: height * 0.04),
-                  Row(
-                    children: [
-                      SizedBox(width: width * 0.3),
-                      CircleAvatar(
-                        child: Icon(Icons.facebook),
-                      ),
-                      SizedBox(width: width * 0.2),
-                      CircleAvatar(
-                        child: Icon(Icons.mail_rounded),
-                      ),
-                    ],
-                  )
                 ],
               ),
             ),

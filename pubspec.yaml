@@ -40,6 +40,7 @@ dependencies:
   dio: ^4.0.6
   http_parser: ^4.0.1
   http_services: ^2.1.1
+  motion_toast: ^2.1.9
 
 dev_dependencies:
   flutter_test:

@@ -8,7 +8,7 @@ import 'package:progulf/screens/register.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: '/dash',
+    initialRoute: '/register',
     routes: {
       '/home': (context) => HomeScreen(),
       '/login': (context) => Login(),

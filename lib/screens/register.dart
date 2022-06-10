@@ -1,6 +1,9 @@
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:progulf/model/user.dart';
+import 'package:progulf/repository/user_repository.dart';
+import 'package:progulf/utils/show_message.dart';
 
 class Register extends StatefulWidget {
   Register({Key? key}) : super(key: key);
@@ -27,6 +30,27 @@ class _RegisterState extends State<Register> {
   }
 
   final _formKey = GlobalKey<FormState>();
+  final _emailController = TextEditingController();
+  final _usernameController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  _registerUser(User user) async {
+    bool isSignup = await UserRepository().registerUser(user);
+    if (isSignup) {
+      _displayMessage(true);
+    } else {
+      _displayMessage(false);
+    }
+  }
+
+  _displayMessage(bool isSignup) {
+    if (isSignup) {
+      displaySuccessMessage(context, "Register Success");
+    } else {
+      displayErrorMessage(context, 'Register Failed');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -72,6 +96,7 @@ class _RegisterState extends State<Register> {
                             SizedBox(width: width * 0.04),
                             Expanded(
                               child: TextFormField(
+                                controller: _emailController,
                                 decoration: InputDecoration(
                                   hintText: 'Email',
                                 ),
@@ -99,6 +124,7 @@ class _RegisterState extends State<Register> {
                             SizedBox(width: width * 0.04),
                             Expanded(
                               child: TextFormField(
+                                controller: _usernameController,
                                 decoration: InputDecoration(
                                   hintText: 'Name',
                                 ),
@@ -126,6 +152,7 @@ class _RegisterState extends State<Register> {
                             SizedBox(width: width * 0.04),
                             Expanded(
                               child: TextFormField(
+                                controller: _passwordController,
                                 decoration: InputDecoration(
                                   hintText: 'Password',
                                 ),
@@ -150,8 +177,10 @@ class _RegisterState extends State<Register> {
                                 },
                                 child: Text('Camera')),
                             CircleAvatar(
-                              backgroundColor: Color(0xffFF5733),
-                              child: _displayImage(),
+                              backgroundColor: Colors.white,
+                              child: ClipRRect(
+                                child: _displayImage(),
+                              ),
                               radius: width * 0.08,
                             ),
                             TextButton(
@@ -168,7 +197,12 @@ class _RegisterState extends State<Register> {
                           child: ElevatedButton(
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
-                                Navigator.of(context).pushNamed('/home');
+                                User user = User(
+                                  email: _emailController.text,
+                                  username: _usernameController.text,
+                                  password: _passwordController.text,
+                                );
+                                _registerUser(user);
                               } else {
                                 return null;
                               }
@@ -203,27 +237,6 @@ class _RegisterState extends State<Register> {
                       ),
                     ),
                   ),
-                  SizedBox(height: height * 0.04),
-                  Text(
-                    'Register with',
-                    style: TextStyle(
-                        color: Colors.deepOrange,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: height * 0.04),
-                  Row(
-                    children: [
-                      SizedBox(width: width * 0.3),
-                      CircleAvatar(
-                        child: Icon(Icons.facebook),
-                      ),
-                      SizedBox(width: width * 0.2),
-                      CircleAvatar(
-                        child: Icon(Icons.mail_rounded),
-                      ),
-                    ],
-                  )
                 ],
               ),
             ),
@@ -235,7 +248,20 @@ class _RegisterState extends State<Register> {
 
   Widget _displayImage() {
     return Center(
-      child: img == null ? Icon(Icons.image) : Image.file(img!),
+      child: img == null
+          ? Icon(
+              Icons.image,
+              color: Colors.grey,
+            )
+          : ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Image.file(
+                img!,
+                height: 50,
+                width: 50,
+                fit: BoxFit.cover,
+              ),
+            ),
     );
   }
 }
