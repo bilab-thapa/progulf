@@ -46,6 +46,9 @@ class _RegisterState extends State<Register> {
   _displayMessage(bool isSignup) {
     if (isSignup) {
       displaySuccessMessage(context, "Register Success");
+      _emailController.clear();
+      _passwordController.clear();
+      _usernameController.clear();
     } else {
       displayErrorMessage(context, 'Register Failed');
     }

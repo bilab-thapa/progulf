@@ -16,7 +16,6 @@ class UserApi {
         url,
         data: user.toJson(),
       );
-      debugPrint(response.toString());
       if (response.statusCode == 200) {
         return true;
       }
@@ -39,9 +38,11 @@ class UserApi {
           "password": password,
         },
       );
+
       if (response.statusCode == 200) {
         LoginResponse loginResponse = LoginResponse.fromJson(response.data);
         token = loginResponse.token;
+        debugPrint(token.toString());
         isLogin = true;
       }
     } catch (e) {

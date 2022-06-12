@@ -14,6 +14,17 @@ class _LoginState extends State<Login> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
+  _navigateToScreen(bool isLogin) {
+    if (isLogin) {
+      Navigator.pushNamed(context, '/home');
+    } else {
+      MotionToast.error(
+              description:
+                  const Text("Either Username or Password is incorrect"))
+          .show(context);
+    }
+  }
+
   _login() async {
     try {
       UserRepository userRepository = UserRepository();
@@ -28,17 +39,6 @@ class _LoginState extends State<Login> {
       MotionToast.error(
         description: Text("Error: ${e.toString()}"),
       ).show(context);
-    }
-  }
-
-  _navigateToScreen(bool isLogin) {
-    if (isLogin) {
-      Navigator.pushNamed(context, '/home');
-    } else {
-      MotionToast.error(
-              description:
-                  const Text("Either Username or Password is incorrect"))
-          .show(context);
     }
   }
 
