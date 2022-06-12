@@ -1,13 +1,19 @@
 class LoginResponse {
-  bool? success;
+  String? email;
+  String? password;
   String? token;
 
-  LoginResponse({this.success, this.token});
+  LoginResponse({this.email, this.password, this.token});
 
-  factory LoginResponse.fromJson(Map<String, dynamic> json) => LoginResponse(
-        success: json["success"],
-        token: json["token"],
-      );
+  LoginResponse.fromJson(Map<String, dynamic> json) {
+    email = json['email'];
+    password = json['password'];
+    token = json['token'];
+  }
 
-  Map<String, dynamic> toJson() => {"success": success, "token": token};
+  Map<String, dynamic> toJson() => {
+        'email': email,
+        'password': password,
+        'token': token,
+      };
 }

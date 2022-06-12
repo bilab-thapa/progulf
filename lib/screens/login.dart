@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:motion_toast/motion_toast.dart';
+import 'package:progulf/repository/user_repository.dart';
 
 class Login extends StatefulWidget {
   Login({Key? key}) : super(key: key);
@@ -9,6 +11,37 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   final _formKey = GlobalKey<FormState>();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  _login() async {
+    try {
+      UserRepository userRepository = UserRepository();
+      bool isLogin = await userRepository.login(
+          _emailController.text, _passwordController.text);
+      if (isLogin) {
+        _navigateToScreen(true);
+      } else {
+        _navigateToScreen(false);
+      }
+    } catch (e) {
+      MotionToast.error(
+        description: Text("Error: ${e.toString()}"),
+      ).show(context);
+    }
+  }
+
+  _navigateToScreen(bool isLogin) {
+    if (isLogin) {
+      Navigator.pushNamed(context, '/home');
+    } else {
+      MotionToast.error(
+              description:
+                  const Text("Either Username or Password is incorrect"))
+          .show(context);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -55,6 +88,7 @@ class _LoginState extends State<Login> {
                             SizedBox(
                               width: width * 0.6,
                               child: TextFormField(
+                                controller: _emailController,
                                 decoration: InputDecoration(
                                   hintText: 'Email',
                                 ),
@@ -83,6 +117,7 @@ class _LoginState extends State<Login> {
                             SizedBox(
                               width: width * 0.6,
                               child: TextFormField(
+                                controller: _passwordController,
                                 decoration: InputDecoration(
                                   hintText: 'Password',
                                 ),
@@ -103,9 +138,7 @@ class _LoginState extends State<Login> {
                           child: ElevatedButton(
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
-                                Navigator.of(context).pushNamed('/home');
-                              } else {
-                                return null;
+                                _login();
                               }
                             },
                             child: Text(

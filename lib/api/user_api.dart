@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:progulf/api/http_services.dart';
 import 'package:progulf/response/login_response.dart';
-
 import '../model/user.dart';
 import '../utils/url.dart';
 
@@ -17,6 +16,7 @@ class UserApi {
         url,
         data: user.toJson(),
       );
+      debugPrint(response.toString());
       if (response.statusCode == 200) {
         return true;
       }
