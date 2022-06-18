@@ -11,7 +11,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(child: Text('Profile')),
+      child: Center(child: Text('This is Profile')),
     );
   }
 }
