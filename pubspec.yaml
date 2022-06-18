@@ -42,6 +42,9 @@ dependencies:
   http_services: ^2.1.1
   motion_toast: ^2.1.9
   google_maps_flutter: ^2.1.8
+  webview_flutter: ^3.0.4
+  shared_preferences: ^2.0.15
+  fluttertoast: ^8.0.9
 
 dev_dependencies:
   flutter_test:
