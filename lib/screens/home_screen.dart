@@ -94,9 +94,9 @@ class HomeScreen extends StatelessWidget {
                   fontSize: 20,
                   fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 15),
+            const SizedBox(height: 20),
             Category(),
-            const SizedBox(height: 15),
+            const SizedBox(height: 20),
             Text(
               'Popular Picks',
               style: TextStyle(

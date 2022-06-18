@@ -1,10 +1,10 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:progulf/screens/forgotpw.dart';
+import 'package:progulf/screens/cart.dart';
+import 'package:progulf/screens/favourite.dart';
 import 'package:progulf/screens/home_screen.dart';
-import 'package:progulf/screens/login.dart';
+import 'package:progulf/screens/message.dart';
 import 'package:progulf/screens/profile.dart';
-import 'package:progulf/screens/register.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
@@ -15,14 +15,14 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
   final navigationkey = GlobalKey<CurvedNavigationBarState>();
-  int index = 1;
+  int index = 2;
 
   final screens = [
-    HomeScreen(),
     ProfileScreen(),
-    Login(),
-    Register(),
-    ForgotPassword()
+    Message(),
+    HomeScreen(),
+    Favourite(),
+    Cart()
   ];
   @override
   Widget build(BuildContext context) {
@@ -63,6 +63,9 @@ class _BottomNavigationState extends State<BottomNavigation> {
           ),
         ],
         onTap: (index) {
+          setState(() {
+            this.index = index;
+          });
           //Handle button tap
         },
       ),
