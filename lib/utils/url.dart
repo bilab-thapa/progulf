@@ -1,4 +1,4 @@
-const baseUrl = "http://172.25.0.119:8080";
+const baseUrl = "http://192.168.1.67:8080";
 const loginUrl = "/customer/login";
 const registerUrl = "/customer/insert";
 const getProductUrl = "/product/insert";

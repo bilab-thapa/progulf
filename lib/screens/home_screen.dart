@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
           centerTitle: true,
           title: Row(
             children: [
-              SizedBox(width: width * 0.35),
+              SizedBox(width: width * 0.20),
               Text(
                 'ProGulf',
                 style: TextStyle(
@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: width * 0.2,
+                width: width * 0.20,
               ),
               IconButton(
                   onPressed: () {

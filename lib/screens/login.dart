@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:motion_toast/motion_toast.dart';
 import 'package:progulf/repository/user_repository.dart';
+import 'package:progulf/utils/url.dart';
 
 class Login extends StatefulWidget {
   Login({Key? key}) : super(key: key);
@@ -14,14 +15,14 @@ class _LoginState extends State<Login> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
-  _navigateToScreen(bool isLogin) {
-    if (isLogin) {
+  _navigateToScreen(bool isLogin) async {
+    if (isLogin && token != null) {
+      debugPrint(token);
       Navigator.pushNamed(context, '/home');
     } else {
       MotionToast.error(
-              description:
-                  const Text("Either Username or Password is incorrect"))
-          .show(context);
+        description: const Text("Either Username or Password is incorrect"),
+      ).show(context);
     }
   }
 

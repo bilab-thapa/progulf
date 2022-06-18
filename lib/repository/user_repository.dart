@@ -6,7 +6,7 @@ class UserRepository {
     return await UserApi().registerUser(user);
   }
 
-  Future<bool> login(String username, String password) async {
-    return UserApi().login(username, password);
+  Future<bool> login(String email, String password) async {
+    return UserApi().login(email, password);
   }
 }
