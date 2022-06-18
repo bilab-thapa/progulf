@@ -32,6 +32,10 @@
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="progulf" >
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB6Hld64VopCiHdlJKkpIeCLyQqYY0N8Ak" />
+
         <activity
             android:name="com.example.progulf.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 application
-INJECTED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:6:4-36:19
+INJECTED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:6:4-38:19
 MERGED from [:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-17:19
 MERGED from [:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-17:19
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
@@ -22,11 +22,11 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/bila
 	android:name
 		INJECTED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml
 manifest
-ADDED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:1:1-37:12
-MERGED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:1:1-37:12
+ADDED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:1:1-39:12
+INJECTED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:1:1-39:12
+INJECTED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:1:1-39:12
+INJECTED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:1:1-39:12
+MERGED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:1:1-39:12
 MERGED from [:google_maps_flutter] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/google_maps_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-19:12
 MERGED from [:flutter_plugin_android_lifecycle] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
@@ -61,11 +61,11 @@ INJECTED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Developme
 		INJECTED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:1:1-37:12
+		ADDED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:1:1-39:12
 		INJECTED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/debug/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:1:1-37:12
+		ADDED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:1:1-39:12
 		INJECTED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:1:11-69

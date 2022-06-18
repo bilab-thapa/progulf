@@ -15,14 +15,34 @@ class HomeScreen extends StatelessWidget {
       extendBody: true,
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        centerTitle: true,
-        title: Text(
-          'Progulf',
-          style: TextStyle(fontSize: 27, color: Colors.red),
-        ),
-      ),
+          backgroundColor: Colors.white,
+          elevation: 0,
+          centerTitle: true,
+          title: Row(
+            children: [
+              SizedBox(width: width * 0.35),
+              Text(
+                'ProGulf',
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red,
+                ),
+              ),
+              SizedBox(
+                width: width * 0.2,
+              ),
+              IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/map');
+                  },
+                  icon: Icon(
+                    Icons.info,
+                    size: 30,
+                    color: Colors.lightBlue,
+                  ))
+            ],
+          )),
       body: SingleChildScrollView(
         child: Column(
           children: [

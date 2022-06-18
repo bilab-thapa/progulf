@@ -11,7 +11,7 @@ class MapZone extends StatefulWidget {
 class _MapZoneState extends State<MapZone> {
   GoogleMapController? mapController;
   Set<Marker> markers = {};
-  LatLng myLocation = const LatLng(27.7229618, 85.3435109);
+  LatLng myLocation = const LatLng(27.7230162, 85.3455477);
 
   @override
   void initState() {
@@ -32,6 +32,12 @@ class _MapZoneState extends State<MapZone> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text('Map Zone'),
+        backgroundColor: Colors.lightBlue,
+        elevation: 0,
+      ),
       body: GoogleMap(
         zoomGesturesEnabled: true,
         initialCameraPosition: CameraPosition(
