@@ -54,6 +54,14 @@ flutter_plugin_android_lifecycle
 2.12
 file:///Users/bilabthapa/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.6/
 file:///Users/bilabthapa/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.6/lib/
+google_maps_flutter
+2.14
+file:///Users/bilabthapa/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter-2.1.8/
+file:///Users/bilabthapa/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter-2.1.8/lib/
+google_maps_flutter_platform_interface
+2.12
+file:///Users/bilabthapa/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter_platform_interface-2.2.0/
+file:///Users/bilabthapa/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter_platform_interface-2.2.0/lib/
 http
 2.14
 file:///Users/bilabthapa/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.4/
@@ -130,6 +138,10 @@ stream_channel
 2.12
 file:///Users/bilabthapa/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/stream_channel-2.1.0/
 file:///Users/bilabthapa/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/stream_channel-2.1.0/lib/
+stream_transform
+2.12
+file:///Users/bilabthapa/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/stream_transform-2.0.0/
+file:///Users/bilabthapa/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/stream_transform-2.0.0/lib/
 string_scanner
 2.12
 file:///Users/bilabthapa/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/string_scanner-1.1.0/

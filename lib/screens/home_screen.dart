@@ -1,4 +1,3 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:progulf/widgets/categories.dart';
 import 'package:progulf/widgets/product.dart';
@@ -13,6 +12,7 @@ class HomeScreen extends StatelessWidget {
     width = size.width;
 
     return Scaffold(
+      extendBody: true,
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(10),
               child: Container(
-                height: height * 0.15,
+                height: height * 0.17,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
@@ -106,38 +106,9 @@ class HomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 15),
             Product(),
+            const SizedBox(height: 60),
           ],
         ),
-      ),
-      bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.transparent,
-        color: Colors.orange,
-        buttonBackgroundColor: Colors.deepOrange,
-        items: <Widget>[
-          Icon(
-            Icons.home,
-            size: 30,
-            color: Colors.white,
-          ),
-          Icon(
-            Icons.favorite,
-            size: 30,
-            color: Colors.white,
-          ),
-          Icon(
-            Icons.email,
-            size: 30,
-            color: Colors.white,
-          ),
-          Icon(
-            Icons.shopping_cart,
-            size: 30,
-            color: Colors.white,
-          ),
-        ],
-        onTap: (index) {
-          //Handle button tap
-        },
       ),
     );
   }
