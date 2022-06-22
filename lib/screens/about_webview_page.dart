@@ -15,7 +15,7 @@ class _AboutPageState extends State<AboutPage> {
       body: SafeArea(
         child: WebView(
           javascriptMode: JavascriptMode.unrestricted,
-          initialUrl: 'https://softwarica.edu.np/',
+          initialUrl: 'http://autoforcenepal.com',
         ),
       ),
     );

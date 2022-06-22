@@ -9,7 +9,7 @@ import 'package:progulf/screens/mapzone.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: '/login',
+    initialRoute: '/home',
     routes: {
       '/about': (context) => AboutPage(),
       '/login': (context) => Login(),
