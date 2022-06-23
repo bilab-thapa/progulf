@@ -45,6 +45,10 @@ dependencies:
   webview_flutter: ^3.0.4
   shared_preferences: ^2.0.15
   fluttertoast: ^8.0.9
+  awesome_notifications: ^0.6.21
+  json_serializable: ^6.2.0
+  build_runner: ^2.1.11
+  
 
 dev_dependencies:
   flutter_test:

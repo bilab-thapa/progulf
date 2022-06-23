@@ -1,3 +1,4 @@
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:motion_toast/motion_toast.dart';
 import 'package:progulf/repository/user_repository.dart';
@@ -15,9 +16,31 @@ class _LoginState extends State<Login> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
+  _checkNotificationEnabled() {
+    AwesomeNotifications().isNotificationAllowed().then((isAllowed) {
+      if (!isAllowed) {
+        AwesomeNotifications().requestPermissionToSendNotifications();
+      }
+    });
+  }
+
+  @override
+  void initState() {
+    _checkNotificationEnabled();
+    super.initState();
+  }
+
   _navigateToScreen(bool isLogin) async {
     if (isLogin && token != null) {
       debugPrint(token);
+      AwesomeNotifications().createNotification(
+        content: NotificationContent(
+          channelKey: 'Basic',
+          id: 1,
+          title: 'ProGulf',
+          body: 'Logged In Successfully',
+        ),
+      );
       Navigator.pushNamed(context, '/home');
     } else {
       MotionToast.error(

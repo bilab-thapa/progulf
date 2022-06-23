@@ -5,8 +5,8 @@
 5    android:versionName="1.0.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="20"
-9        android:targetSdkVersion="28" />
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="30" />
 10    <!--
 11         Flutter needs it to communicate with the running application
 12         to allow setting breakpoints, to provide hot reload, etc.
@@ -17,125 +17,246 @@
 15    <uses-permission android:name="android.permission,ACESS-FINE_LOCATION" />
 15-->/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:4:5-79
 15-->/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:4:22-77
-16    <uses-permission android:name="android.permission.CAMERA" /> <!-- Include required permissions for Google Maps API to run. -->
+16    <uses-permission android:name="android.permission.CAMERA" />
 16-->/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:5:5-66
 16-->/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/AndroidManifest.xml:5:22-64
-17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-17-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:23:5-79
-17-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:23:22-76
-18
-19    <uses-feature
-19-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:26:5-28:35
-20        android:glEsVersion="0x00020000"
-20-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:27:9-41
-21        android:required="true" />
-21-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:28:9-32
-22
-23    <queries>
-23-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:30:5-34:15
+17    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+17-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-81
+17-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-78
+18    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Include required permissions for Google Maps API to run. -->
+18-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-66
+18-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-63
+19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+19-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:23:5-79
+19-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:23:22-76
+20
+21    <uses-feature
+21-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:26:5-28:35
+22        android:glEsVersion="0x00020000"
+22-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:27:9-41
+23        android:required="true" />
+23-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:28:9-32
 24
-25        <!-- Needs to be explicitly declared on Android R+ -->
-26        <package android:name="com.google.android.apps.maps" />
-26-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:9-64
-26-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:18-61
-27    </queries>
-28
-29    <application
-30        android:name="android.app.Application"
-31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-31-->[androidx.core:core:1.6.0] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/122df2e57d294d1a53db26bbc3b813c1/core-1.6.0/AndroidManifest.xml:24:18-86
-32        android:debuggable="true"
-33        android:icon="@mipmap/ic_launcher"
-34        android:label="progulf" >
-35        <meta-data
-36            android:name="com.google.android.geo.API_KEY"
-37            android:value="AIzaSyB6Hld64VopCiHdlJKkpIeCLyQqYY0N8Ak" />
-38
-39        <activity
-40            android:name="com.example.progulf.MainActivity"
-41            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-42            android:exported="true"
-43            android:hardwareAccelerated="true"
-44            android:launchMode="singleTop"
-45            android:theme="@style/LaunchTheme"
-46            android:windowSoftInputMode="adjustResize" >
-47
-48            <!--
-49                 Specifies an Android theme to apply to this Activity as soon as
-50                 the Android process has started. This theme is visible to the user
-51                 while the Flutter UI initializes. After that, this theme continues
-52                 to determine the Window background behind the Flutter UI.
-53            -->
-54            <meta-data
-55                android:name="io.flutter.embedding.android.NormalTheme"
-56                android:resource="@style/NormalTheme" />
-57
-58            <intent-filter>
-59                <action android:name="android.intent.action.MAIN" />
-60
-61                <category android:name="android.intent.category.LAUNCHER" />
-62            </intent-filter>
-63        </activity>
-64        <!--
-65             Don't delete the meta-data below.
-66             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-67        -->
-68        <meta-data
-69            android:name="flutterEmbedding"
-70            android:value="2" />
-71
-72        <provider
-72-->[:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-16:20
-73            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-73-->[:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-82
-74            android:authorities="com.example.progulf.flutter.image_provider"
-74-->[:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-74
-75            android:exported="false"
-75-->[:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-37
-76            android:grantUriPermissions="true" >
-76-->[:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-47
+25    <queries>
+25-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:30:5-34:15
+26
+27        <!-- Needs to be explicitly declared on Android R+ -->
+28        <package android:name="com.google.android.apps.maps" />
+28-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:9-64
+28-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:18-61
+29    </queries> <!-- for android -->
+30    <!-- <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/> -->
+31    <!-- <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/> -->
+32    <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
+33    <!-- <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" /> -->
+34    <!-- for Samsung -->
+35    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+35-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:19:5-86
+35-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:19:22-83
+36    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- for htc -->
+36-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:20:5-87
+36-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:20:22-84
+37    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+37-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:23:5-81
+37-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:23:22-78
+38    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- for sony -->
+38-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:24:5-83
+38-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:24:22-80
+39    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+39-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:27:5-88
+39-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:27:22-85
+40    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- for apex -->
+40-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:28:5-92
+40-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:28:22-89
+41    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- for solid -->
+41-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:31:5-84
+41-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:31:22-81
+42    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- for huawei -->
+42-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:34:5-83
+42-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:34:22-80
+43    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+43-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:37:5-91
+43-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:37:22-88
+44    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+44-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:38:5-92
+44-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:38:22-89
+45    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- for ZUK -->
+45-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:39:5-93
+45-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:39:22-90
+46    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- for OPPO -->
+46-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:42:5-73
+46-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:42:22-70
+47    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+47-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:45:5-82
+47-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:45:22-79
+48    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- for EvMe -->
+48-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:46:5-83
+48-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:46:22-80
+49    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+49-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:49:5-88
+49-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:49:22-85
+50    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+50-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:50:5-89
+50-->[me.leolin:ShortcutBadger:1.1.22] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/644c21982e4e9db8623e39519462506e/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:50:22-86
+51
+52    <application
+53        android:name="android.app.Application"
+54        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+54-->[androidx.core:core:1.7.0] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/b9a960218f5163997c0fdfa3d3078c0e/core-1.7.0/AndroidManifest.xml:24:18-86
+55        android:debuggable="true"
+56        android:icon="@mipmap/ic_launcher"
+57        android:label="progulf" >
+58        <meta-data
+59            android:name="com.google.android.geo.API_KEY"
+60            android:value="AIzaSyB6Hld64VopCiHdlJKkpIeCLyQqYY0N8Ak" />
+61
+62        <activity
+63            android:name="com.example.progulf.MainActivity"
+64            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+65            android:exported="true"
+66            android:hardwareAccelerated="true"
+67            android:launchMode="singleTop"
+68            android:theme="@style/LaunchTheme"
+69            android:windowSoftInputMode="adjustResize" >
+70
+71            <!--
+72                 Specifies an Android theme to apply to this Activity as soon as
+73                 the Android process has started. This theme is visible to the user
+74                 while the Flutter UI initializes. After that, this theme continues
+75                 to determine the Window background behind the Flutter UI.
+76            -->
 77            <meta-data
-77-->[:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-15:75
-78                android:name="android.support.FILE_PROVIDER_PATHS"
-78-->[:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:14:17-67
-79                android:resource="@xml/flutter_image_picker_file_paths" />
-79-->[:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-72
-80        </provider>
-81
-82        <uses-library
-82-->[androidx.window:window:1.0.0-beta04] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
-83            android:name="androidx.window.extensions"
-83-->[androidx.window:window:1.0.0-beta04] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
-84            android:required="false" />
-84-->[androidx.window:window:1.0.0-beta04] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
-85        <uses-library
-85-->[androidx.window:window:1.0.0-beta04] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
-86            android:name="androidx.window.sidecar"
-86-->[androidx.window:window:1.0.0-beta04] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
-87            android:required="false" /> <!-- Needs to be explicitly declared on P+ -->
-87-->[androidx.window:window:1.0.0-beta04] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
-88        <uses-library
-88-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:39:9-41:40
-89            android:name="org.apache.http.legacy"
-89-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:40:13-50
-90            android:required="false" />
-90-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:41:13-37
-91
-92        <activity
-92-->[com.google.android.gms:play-services-base:18.0.1] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/642cc9e2632e586d1058ed231591ead4/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
-93            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-93-->[com.google.android.gms:play-services-base:18.0.1] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/642cc9e2632e586d1058ed231591ead4/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
-94            android:exported="false"
-94-->[com.google.android.gms:play-services-base:18.0.1] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/642cc9e2632e586d1058ed231591ead4/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
-95            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-95-->[com.google.android.gms:play-services-base:18.0.1] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/642cc9e2632e586d1058ed231591ead4/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
-96
-97        <meta-data
-97-->[com.google.android.gms:play-services-basement:18.0.0] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/65c8b9154009d1931a3db50d7627d9e4/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
-98            android:name="com.google.android.gms.version"
-98-->[com.google.android.gms:play-services-basement:18.0.0] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/65c8b9154009d1931a3db50d7627d9e4/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
-99            android:value="@integer/google_play_services_version" />
-99-->[com.google.android.gms:play-services-basement:18.0.0] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/65c8b9154009d1931a3db50d7627d9e4/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
-100    </application>
-101
-102</manifest>
+78                android:name="io.flutter.embedding.android.NormalTheme"
+79                android:resource="@style/NormalTheme" />
+80
+81            <intent-filter>
+82                <action android:name="android.intent.action.MAIN" />
+83
+84                <category android:name="android.intent.category.LAUNCHER" />
+85            </intent-filter>
+86        </activity>
+87        <!--
+88             Don't delete the meta-data below.
+89             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+90        -->
+91        <meta-data
+92            android:name="flutterEmbedding"
+93            android:value="2" />
+94
+95        <provider
+95-->[:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-16:20
+96            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+96-->[:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-82
+97            android:authorities="com.example.progulf.flutter.image_provider"
+97-->[:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-74
+98            android:exported="false"
+98-->[:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-37
+99            android:grantUriPermissions="true" >
+99-->[:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-47
+100            <meta-data
+100-->[:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-15:75
+101                android:name="android.support.FILE_PROVIDER_PATHS"
+101-->[:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:14:17-67
+102                android:resource="@xml/flutter_image_picker_file_paths" />
+102-->[:image_picker_android] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-72
+103        </provider>
+104
+105        <receiver
+105-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-13:40
+106            android:name="me.carda.awesome_notifications.notifications.broadcastReceivers.DismissedNotificationReceiver"
+106-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-121
+107            android:exported="false" />
+107-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-37
+108        <receiver
+108-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:14:9-16:40
+109            android:name="me.carda.awesome_notifications.notifications.broadcastReceivers.ScheduledNotificationReceiver"
+109-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-121
+110            android:exported="false" />
+110-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-37
+111        <receiver
+111-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:17:9-19:40
+112            android:name="me.carda.awesome_notifications.notifications.broadcastReceivers.KeepOnTopActionReceiver"
+112-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-115
+113            android:exported="false" />
+113-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-37
+114        <receiver
+114-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:20:9-33:20
+115            android:name="me.carda.awesome_notifications.notifications.broadcastReceivers.RefreshSchedulesReceiver"
+115-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-116
+116            android:exported="false" >
+116-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-37
+117            <intent-filter>
+117-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-32:29
+118                <category android:name="android.intent.category.DEFAULT" />
+118-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:24:17-76
+118-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:24:27-73
+119
+120                <action android:name="android.intent.action.BOOT_COMPLETED" />
+120-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-79
+120-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:26:25-76
+121                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+121-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:27:17-86
+121-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:27:25-83
+122                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+122-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:28:17-84
+122-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:28:25-81
+123                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+123-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:29:17-82
+123-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:29:25-79
+124                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+124-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:30:17-82
+124-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:30:25-79
+125                <action android:name="android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED" />
+125-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:31:17-107
+125-->[:awesome_notifications] /Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/awesome_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:31:25-104
+126            </intent-filter>
+127        </receiver>
+128
+129        <uses-library
+129-->[androidx.window:window:1.0.0-beta04] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+130            android:name="androidx.window.extensions"
+130-->[androidx.window:window:1.0.0-beta04] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+131            android:required="false" />
+131-->[androidx.window:window:1.0.0-beta04] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+132        <uses-library
+132-->[androidx.window:window:1.0.0-beta04] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+133            android:name="androidx.window.sidecar"
+133-->[androidx.window:window:1.0.0-beta04] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+134            android:required="false" /> <!-- Needs to be explicitly declared on P+ -->
+134-->[androidx.window:window:1.0.0-beta04] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+135        <uses-library
+135-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:39:9-41:40
+136            android:name="org.apache.http.legacy"
+136-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:40:13-50
+137            android:required="false" />
+137-->[com.google.android.gms:play-services-maps:18.0.2] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/7d064776558e2f29807c8a762199a631/jetified-play-services-maps-18.0.2/AndroidManifest.xml:41:13-37
+138
+139        <activity
+139-->[com.google.android.gms:play-services-base:18.0.1] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/642cc9e2632e586d1058ed231591ead4/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+140            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+140-->[com.google.android.gms:play-services-base:18.0.1] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/642cc9e2632e586d1058ed231591ead4/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+141            android:exported="false"
+141-->[com.google.android.gms:play-services-base:18.0.1] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/642cc9e2632e586d1058ed231591ead4/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+142            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+142-->[com.google.android.gms:play-services-base:18.0.1] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/642cc9e2632e586d1058ed231591ead4/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+143
+144        <meta-data
+144-->[com.google.android.gms:play-services-basement:18.0.0] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/65c8b9154009d1931a3db50d7627d9e4/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+145            android:name="com.google.android.gms.version"
+145-->[com.google.android.gms:play-services-basement:18.0.0] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/65c8b9154009d1931a3db50d7627d9e4/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+146            android:value="@integer/google_play_services_version" />
+146-->[com.google.android.gms:play-services-basement:18.0.0] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/65c8b9154009d1931a3db50d7627d9e4/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+147
+148        <provider
+148-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/5b28ea65995a10537a2c988d76489f89/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+149            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+149-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/5b28ea65995a10537a2c988d76489f89/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
+150            android:authorities="com.example.progulf.lifecycle-process"
+150-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/5b28ea65995a10537a2c988d76489f89/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+151            android:exported="false"
+151-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/5b28ea65995a10537a2c988d76489f89/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+152            android:multiprocess="true" />
+152-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/bilabthapa/.gradle/caches/transforms-2/files-2.1/5b28ea65995a10537a2c988d76489f89/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+153    </application>
+154
+155</manifest>

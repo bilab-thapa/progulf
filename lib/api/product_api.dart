@@ -23,7 +23,7 @@ class ProductApi {
         ); //
       }
       var formData = FormData.fromMap({
-        "name": "Product Name",
+        "name": "productname",
         "price": "100",
         "description": "Product Description",
         "image": image,

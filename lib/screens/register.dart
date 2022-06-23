@@ -130,7 +130,7 @@ class _RegisterState extends State<Register> {
                                 child: TextFormField(
                                   controller: _usernameController,
                                   decoration: InputDecoration(
-                                    hintText: 'Name',
+                                    hintText: 'Username',
                                   ),
                                   validator: (value) {
                                     if (value == null || value.isEmpty) {

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/app/intermediates/res/merged/debug/drawable_logo.png.flat",
+        "source": "/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/res/drawable/logo.png"
+    },
+    {
         "merged": "/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/app/intermediates/res/merged/debug/drawable-v21_launch_background.xml.flat",
         "source": "/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/res/drawable-v21/launch_background.xml"
     },
@@ -22,9 +26,5 @@
     {
         "merged": "/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/app/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/build/app/intermediates/res/merged/debug/drawable_launch_background.xml.flat",
-        "source": "/Users/bilabthapa/Desktop/Final Assignment Sem 5/Android Development/Progulf/ProGulf_App/android/app/src/main/res/drawable/launch_background.xml"
     }
 ]
