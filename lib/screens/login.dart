@@ -1,7 +1,9 @@
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:motion_toast/motion_toast.dart';
 import 'package:progulf/repository/user_repository.dart';
+import 'package:progulf/utils/splash.dart';
 import 'package:progulf/utils/url.dart';
 
 class Login extends StatefulWidget {
@@ -15,6 +17,28 @@ class _LoginState extends State<Login> {
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+  final userToken = TextEditingController();
+
+  late Box box1;
+
+  void createBox() async {
+    box1 = await Hive.openBox('login');
+    getData();
+  }
+
+  void getData() async {
+    if (box1.get("email") != null) {
+      _emailController.text = box1.get('email');
+    }
+    if (box1.get("token") != null) {
+      userToken.text = box1.get('token');
+    }
+    if (box1.get("password") != null) {
+      _passwordController.text = box1.get('password');
+      SplashScreen();
+      _login();
+    }
+  }
 
   _checkNotificationEnabled() {
     AwesomeNotifications().isNotificationAllowed().then((isAllowed) {
@@ -28,11 +52,15 @@ class _LoginState extends State<Login> {
   void initState() {
     _checkNotificationEnabled();
     super.initState();
+    createBox();
   }
 
   _navigateToScreen(bool isLogin) async {
     if (isLogin && token != null) {
-      debugPrint(token);
+      // debugPrint(token);
+      await box1.put('email', _emailController.text);
+      await box1.put('password', _passwordController.text);
+      await box1.put('token', token);
       AwesomeNotifications().createNotification(
         content: NotificationContent(
           channelKey: 'Basic',
@@ -41,6 +69,7 @@ class _LoginState extends State<Login> {
           body: 'Logged In Successfully',
         ),
       );
+
       Navigator.pushNamed(context, '/home');
     } else {
       MotionToast.error(

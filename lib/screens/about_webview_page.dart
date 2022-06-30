@@ -16,6 +16,7 @@ class _AboutPageState extends State<AboutPage> {
         child: WebView(
           javascriptMode: JavascriptMode.unrestricted,
           initialUrl: 'http://autoforcenepal.com',
+          // initialUrl: 'https://softwarica.edu.np/',
         ),
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:progulf/screens/about_webview_page.dart';
 import 'package:progulf/screens/forgotpw.dart';
 import 'package:progulf/screens/login.dart';
@@ -7,7 +8,8 @@ import 'package:progulf/screens/register.dart';
 import 'package:progulf/widgets/bottom_navigation.dart';
 import 'package:progulf/screens/mapzone.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
   AwesomeNotifications().initialize('resource://drawable/logo', [
     NotificationChannel(
         channelKey: "Basic",
