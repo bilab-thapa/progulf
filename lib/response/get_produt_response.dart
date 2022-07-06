@@ -1,7 +1,6 @@
 import 'package:eshopping/response/product_category.dart';
 // ignore: depend_on_referenced_packages
 import 'package:json_annotation/json_annotation.dart';
-import 'package:progulf/model/product_model.dart';
 
 part 'get_product_response.g.dart';
 

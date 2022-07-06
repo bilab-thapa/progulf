@@ -1,23 +1,14 @@
-class Product {
+class ProductModel {
   String? productname;
   String? price;
   String? description;
-  String? quantity;
-  String? category;
 
-  Product(
-      {this.productname,
-      this.price,
-      this.description,
-      this.quantity,
-      this.category});
+  ProductModel({this.productname, this.price, this.description});
 
-  Product.fromJson(Map<String, dynamic> json) {
+  ProductModel.fromJson(Map<String, dynamic> json) {
     productname = json['productname'];
     price = json['price'];
     description = json['description'];
-    quantity = json['quantity'];
-    category = json['category'];
   }
 
   Map<String, dynamic> toJson() {
@@ -25,8 +16,6 @@ class Product {
     data['productname'] = this.productname;
     data['price'] = this.price;
     data['description'] = this.description;
-    data['quantity'] = this.quantity;
-    data['category'] = this.category;
     return data;
   }
 }
