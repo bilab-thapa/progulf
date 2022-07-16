@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:progulf/widgets/categories.dart';
 import 'package:progulf/widgets/product.dart';
 
+// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
   var size, height, width;
 
@@ -51,33 +52,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                child: Container(
-                  height: height * 0.06,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.grey,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      const SizedBox(width: 10),
-                      Icon(
-                        Icons.search,
-                        size: 25,
-                        color: Colors.white,
-                      ),
-                      const SizedBox(width: 110),
-                      Text(
-                        'Search',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
-                      )
-                    ],
-                  ),
-                ),
-              ),
+              SizedBox(height: height * 0.02),
               //const SizedBox(height: 10),
               Padding(
                 padding: EdgeInsets.all(10),
@@ -130,8 +105,12 @@ class HomeScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 15),
-              Product(),
-              const SizedBox(height: 60),
+              Container(
+                height: height * 0.35,
+                width: double.infinity,
+                child: ProductAll(),
+              ),
+              SizedBox(height: 60),
             ],
           ),
         ),

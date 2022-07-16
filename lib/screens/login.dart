@@ -99,6 +99,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
+    bool _passwordVisible = false;
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -171,12 +172,24 @@ class _LoginState extends State<Login> {
                               width: width * 0.6,
                               child: TextFormField(
                                 controller: _passwordController,
+                                obscureText: _passwordVisible,
                                 decoration: InputDecoration(
                                   hintText: 'Password',
+                                  suffixIcon: IconButton(
+                                    icon: Icon(Icons.visibility_off),
+                                    onPressed: () {
+                                      // Update the state i.e. toogle the state of passwordVisible variable
+                                      setState(() {
+                                        _passwordVisible = !_passwordVisible;
+                                      });
+                                    },
+                                  ),
                                 ),
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
                                     return 'Please enter password';
+                                  } else if (value.length <= 6) {
+                                    return 'Passowrd is too short';
                                   }
                                   return null;
                                 },

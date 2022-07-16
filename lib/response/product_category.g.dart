@@ -10,14 +10,8 @@ ProductCategory _$ProductCategoryFromJson(Map<String, dynamic> json) =>
     ProductCategory(
       name: json['name'] as String?,
       description: json['description'] as String?,
-      richDescription: json['richDescription'] as String?,
       image: json['image'] as String?,
-      brand: json['brand'] as String?,
-      price: json['price'] as int?,
-      countInStock: json['countInStock'] as int?,
-      rating: json['rating'] as int?,
-      numReviews: json['numReviews'] as int?,
-      isFeatured: json['isFeatured'] as bool?,
+      price: json['price'] as String?,
     )..id = json['_id'] as String?;
 
 Map<String, dynamic> _$ProductCategoryToJson(ProductCategory instance) =>
@@ -25,12 +19,6 @@ Map<String, dynamic> _$ProductCategoryToJson(ProductCategory instance) =>
       '_id': instance.id,
       'name': instance.name,
       'description': instance.description,
-      'richDescription': instance.richDescription,
       'image': instance.image,
-      'brand': instance.brand,
       'price': instance.price,
-      'countInStock': instance.countInStock,
-      'rating': instance.rating,
-      'numReviews': instance.numReviews,
-      'isFeatured': instance.isFeatured,
     };

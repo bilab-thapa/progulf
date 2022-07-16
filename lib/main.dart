@@ -2,6 +2,7 @@ import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:progulf/screens/about_webview_page.dart';
+import 'package:progulf/screens/detail_product_screen.dart';
 import 'package:progulf/screens/forgotpw.dart';
 import 'package:progulf/screens/login.dart';
 import 'package:progulf/screens/register.dart';
@@ -30,6 +31,7 @@ void main() async {
       '/forgot': (context) => ForgotPassword(),
       '/map': (context) => MapZone(),
       '/home': (context) => BottomNavigation(),
+      '/productinfo': (context) => ProductDetail()
     },
   ));
 }

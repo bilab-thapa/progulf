@@ -1,4 +1,6 @@
+
 import 'package:json_annotation/json_annotation.dart';
+
 part 'product_category.g.dart';
 
 //flutter pub run build_runner build
@@ -8,26 +10,14 @@ class ProductCategory {
   String? id;
   String? name;
   String? description;
-  String? richDescription;
   String? image;
-  String? brand;
-  int? price;
-  int? countInStock;
-  int? rating;
-  int? numReviews;
-  bool? isFeatured;
+  String? price;
 
   ProductCategory({
     this.name,
     this.description,
-    this.richDescription,
     this.image,
-    this.brand,
     this.price,
-    this.countInStock,
-    this.rating,
-    this.numReviews,
-    this.isFeatured,
   });
 
   factory ProductCategory.fromJson(Map<String, dynamic> json) =>

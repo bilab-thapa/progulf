@@ -1,10 +1,11 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:progulf/screens/cart.dart';
-import 'package:progulf/screens/favourite.dart';
 import 'package:progulf/screens/home_screen.dart';
 import 'package:progulf/screens/message.dart';
 import 'package:progulf/screens/profile.dart';
+
+import '../screens/favourite.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);

@@ -1,5 +1,3 @@
-import 'dart:io';
-import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:progulf/model/user.dart';
 import 'package:progulf/repository/user_repository.dart';
@@ -13,26 +11,12 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
-  File? img;
-  Future _loadImage(ImageSource imageSource) async {
-    try {
-      final image = await ImagePicker().pickImage(source: imageSource);
-      if (image != null) {
-        setState(() {
-          img = File(image.path);
-        });
-      } else {
-        return;
-      }
-    } catch (e) {
-      debugPrint('Failed to pick Image $e');
-    }
-  }
-
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
+  final _ageController = TextEditingController();
+  bool _passwordVisible = false;
 
   _registerUser(User user) async {
     bool isSignup = await UserRepository().registerUser(user);
@@ -49,6 +33,7 @@ class _RegisterState extends State<Register> {
       _emailController.clear();
       _passwordController.clear();
       _usernameController.clear();
+      _ageController.clear();
     } else {
       displayErrorMessage(context, 'Register Failed');
     }
@@ -149,6 +134,34 @@ class _RegisterState extends State<Register> {
                               CircleAvatar(
                                 backgroundColor: Color(0xffFF5733),
                                 child: Icon(
+                                  Icons.person,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: width * 0.04),
+                              Expanded(
+                                child: TextFormField(
+                                  controller: _ageController,
+                                  decoration: InputDecoration(
+                                    hintText: 'Age',
+                                  ),
+                                  validator: (value) {
+                                    if (value == null || value.isEmpty) {
+                                      return 'Please enter age';
+                                    }
+                                    return null;
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: height * 0.02),
+                          Row(
+                            children: [
+                              SizedBox(width: width * 0.02),
+                              CircleAvatar(
+                                backgroundColor: Color(0xffFF5733),
+                                child: Icon(
                                   Icons.lock,
                                   color: Colors.white,
                                 ),
@@ -157,12 +170,31 @@ class _RegisterState extends State<Register> {
                               Expanded(
                                 child: TextFormField(
                                   controller: _passwordController,
+                                  obscureText: !_passwordVisible,
                                   decoration: InputDecoration(
                                     hintText: 'Password',
+                                    suffixIcon: IconButton(
+                                      icon: Icon(
+                                        // Based on passwordVisible state choose the icon
+                                        _passwordVisible
+                                            ? Icons.visibility
+                                            : Icons.visibility_off,
+                                        color:
+                                            Theme.of(context).primaryColorDark,
+                                      ),
+                                      onPressed: () {
+                                        // Update the state i.e. toogle the state of passwordVisible variable
+                                        setState(() {
+                                          _passwordVisible = !_passwordVisible;
+                                        });
+                                      },
+                                    ),
                                   ),
                                   validator: (value) {
                                     if (value == null || value.isEmpty) {
                                       return 'Please enter password';
+                                    } else if (value.length <= 6) {
+                                      return 'Passowrd is too short';
                                     }
                                     return null;
                                   },
@@ -172,28 +204,6 @@ class _RegisterState extends State<Register> {
                           ),
                           SizedBox(height: height * 0.02),
                           SizedBox(width: width * 0.02),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              TextButton(
-                                  onPressed: () {
-                                    _loadImage(ImageSource.camera);
-                                  },
-                                  child: Text('Camera')),
-                              CircleAvatar(
-                                backgroundColor: Colors.white,
-                                child: ClipRRect(
-                                  child: _displayImage(),
-                                ),
-                                radius: width * 0.08,
-                              ),
-                              TextButton(
-                                  onPressed: () {
-                                    _loadImage(ImageSource.gallery);
-                                  },
-                                  child: Text('Gallery')),
-                            ],
-                          ),
                           SizedBox(height: height * 0.04),
                           SizedBox(
                             height: height * 0.07,
@@ -205,6 +215,7 @@ class _RegisterState extends State<Register> {
                                     email: _emailController.text,
                                     username: _usernameController.text,
                                     password: _passwordController.text,
+                                    age: _ageController.text,
                                   );
                                   _registerUser(user);
                                 } else {
@@ -248,25 +259,6 @@ class _RegisterState extends State<Register> {
           ),
         ),
       ),
-    );
-  }
-
-  Widget _displayImage() {
-    return Center(
-      child: img == null
-          ? Icon(
-              Icons.image,
-              color: Colors.grey,
-            )
-          : ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.file(
-                img!,
-                height: 50,
-                width: 50,
-                fit: BoxFit.cover,
-              ),
-            ),
     );
   }
 }

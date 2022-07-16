@@ -14,11 +14,10 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<UserResponse?>(
+    return FutureBuilder<UserResponse>(
       future: UserRepository().userInfo(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
-          debugPrint(snapshot.data.toString());
           if (snapshot.data != null) {
             UserResponse userResponse = snapshot.data!;
             return SafeArea(

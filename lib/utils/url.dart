@@ -3,5 +3,5 @@ const loginUrl = "customer/login";
 const registerUrl = "customer/insert";
 const addProductUrl = "product/insert";
 const getUserInfo = "customer/dashboard";
-const getProduct = "product";
+const getProductUrl = "product/display";
 String? token;
