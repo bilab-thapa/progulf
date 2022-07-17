@@ -1,19 +1,58 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:hive/hive.dart';
+import 'package:progulf/model/favourite.dart';
 import 'package:progulf/model/product.dart';
+import 'package:progulf/utils/controller.dart';
 
 class ProductDetail extends StatefulWidget {
-  const ProductDetail({Key? key}) : super(key: key);
+  ProductDetail({Key? key}) : super(key: key);
 
   @override
   State<ProductDetail> createState() => _ProductDetailState();
 }
 
 class _ProductDetailState extends State<ProductDetail> {
+  final MyController c = Get.put(MyController());
+  late Box box2;
+
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
+
     final lstProduct = ModalRoute.of(context)!.settings.arguments as Product;
+    @override
+    String _name = lstProduct.name.toString();
+    String _price = lstProduct.price.toString();
+    String _image = 'http://10.0.2.2:8080/' + lstProduct.image.toString();
+    placeData() async {
+      FavouriteM favourite = FavouriteM(
+        name: _name,
+        price: _price,
+        image: _image,
+      );
+      await box2.add(favourite);
+    }
+    // @override
+    // void getData() async {
+    //   if (box2.get("name") != null) {
+    //     name = box2.get('name');
+    //   }
+    //   if (box2.get("price") != null) {
+    //     price = box2.get('price');
+    //   }
+    //   if (box2.get("image") != null) {
+    //     image = box2.get('image');
+    //   }
+    // }
+
+    @override
+    void createBox() async {
+      box2 = await Hive.openBox('favourite');
+      placeData();
+    }
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -49,7 +88,10 @@ class _ProductDetailState extends State<ProductDetail> {
                     width: width * 0.14,
                     height: height * 0.07,
                     child: ElevatedButton(
-                      onPressed: () => Navigator.pop(context),
+                      onPressed: () {
+                        Get.snackbar("Product", "Added to Favourite");
+                        createBox();
+                      },
                       style: ElevatedButton.styleFrom(
                         primary: Colors.white,
                         shape: RoundedRectangleBorder(
@@ -117,27 +159,40 @@ class _ProductDetailState extends State<ProductDetail> {
             SizedBox(height: height * 0.02),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 CircleAvatar(
                   backgroundColor: Colors.red,
-                  child: Icon(
-                    Icons.remove,
-                    size: 30,
-                    color: Colors.white,
+                  child: IconButton(
+                    onPressed: () {
+                      c.decreament();
+                    },
+                    icon: Icon(
+                      Icons.remove,
+                      size: 25,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
                 SizedBox(width: 20),
-                Text(
-                  "4",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                Obx(
+                  (() => Text(
+                        "${c.items.toString()}",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      )),
                 ),
                 SizedBox(width: 20),
                 CircleAvatar(
                   backgroundColor: Colors.green,
-                  child: Icon(
-                    Icons.add,
-                    size: 30,
-                    color: Colors.white,
+                  child: IconButton(
+                    onPressed: () {
+                      c.increament();
+                    },
+                    icon: Icon(
+                      Icons.add,
+                      size: 25,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ],
@@ -179,29 +234,34 @@ class _ProductDetailState extends State<ProductDetail> {
                       ),
                     ],
                   ),
-                  Container(
-                    height: height * 0.07,
-                    width: width * 0.5,
-                    decoration: const BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
+                  InkWell(
+                    child: Container(
+                      height: height * 0.07,
+                      width: width * 0.5,
+                      decoration: const BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.add_box,
+                            color: Colors.white,
+                          ),
+                          SizedBox(width: width * 0.05),
+                          Text(
+                            'Add to Cart',
+                            style: TextStyle(color: Colors.white),
+                          )
+                        ],
                       ),
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.add_box,
-                          color: Colors.white,
-                        ),
-                        SizedBox(width: width * 0.05),
-                        Text(
-                          'Add to Cart',
-                          style: TextStyle(color: Colors.white),
-                        )
-                      ],
-                    ),
+                    onTap: () {
+                      Get.snackbar("Product", "Successfully Added to Cart");
+                    },
                   ),
                 ],
               ),
