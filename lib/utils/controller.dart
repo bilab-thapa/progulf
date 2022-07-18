@@ -19,3 +19,16 @@ class MyController extends GetxController {
     }
   }
 }
+
+// class ControllerP extends GetxController {
+//   List<String> product = ['a'];
+
+//   increament(name) {
+//     product + [name];
+//   }
+
+//   containCheck(name) {
+//     product.contains(name);
+//     // debugPrint(product.toString());
+//   }
+// }

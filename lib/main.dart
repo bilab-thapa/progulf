@@ -15,13 +15,12 @@ import 'model/favourite.dart';
 
 void main() async {
   await Hive.initFlutter();
-  await Hive.openBox('favourite');
   WidgetsFlutterBinding.ensureInitialized();
   final appDocumentDir = await getApplicationDocumentsDirectory();
-
   Hive
     ..init(appDocumentDir.path)
     ..registerAdapter(FavouriteMAdapter());
+  await Hive.openBox('favourite');
   AwesomeNotifications().initialize('resource://drawable/logo', [
     NotificationChannel(
         channelKey: "Basic",
