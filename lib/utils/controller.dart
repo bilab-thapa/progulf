@@ -41,6 +41,10 @@ class CartController extends GetxController {
     }
   }
 
+  void clearProduct() {
+    _product.clear();
+  }
+
   get product => _product;
 
   void removeProduct(Product product) {
@@ -57,8 +61,12 @@ class CartController extends GetxController {
 
   get total => _product.entries
       // .map((product) => int.parse(product.key.price) * int.parse(product.value))
-      .map((product) => int.parse(product.key.price) * product.value)
+      .map(
+        (product) => int.parse(product.key.price) * product.value,
+      )
       .toList()
-      .reduce((value, element) => value + element)
+      .reduce(
+        (value, element) => value + element,
+      )
       .toString();
 }

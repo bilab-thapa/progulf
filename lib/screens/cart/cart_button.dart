@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:progulf/screens/cart/cart.dart';
 import 'package:progulf/screens/cart/cart_total.dart';
 
+import '../../utils/controller.dart';
+
 class CartScreen extends StatelessWidget {
-  const CartScreen({Key? key}) : super(key: key);
+  final CartController controller = Get.find();
+  CartScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

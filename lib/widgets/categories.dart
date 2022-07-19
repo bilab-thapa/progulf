@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:progulf/screens/category_items.dart';
+import 'package:progulf/screens/category_screen/category_items.dart';
 
 class Category extends StatefulWidget {
   Category({Key? key}) : super(key: key);

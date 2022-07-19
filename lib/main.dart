@@ -2,14 +2,14 @@ import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:progulf/screens/about_webview_page.dart';
-import 'package:progulf/screens/category_items.dart';
-import 'package:progulf/screens/detail_product_screen.dart';
-import 'package:progulf/screens/forgotpw.dart';
-import 'package:progulf/screens/login.dart';
-import 'package:progulf/screens/register.dart';
+import 'package:progulf/screens/head/about_webview_page.dart';
+import 'package:progulf/screens/category_screen/category_items.dart';
+import 'package:progulf/utils/detail_product_screen.dart';
+import 'package:progulf/screens/auth/forgotpw.dart';
+import 'package:progulf/screens/auth/login.dart';
+import 'package:progulf/screens/auth/register.dart';
 import 'package:progulf/widgets/bottom_navigation.dart';
-import 'package:progulf/screens/mapzone.dart';
+import 'package:progulf/screens/head/mapzone.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'model/favourite.dart';
@@ -43,7 +43,7 @@ void main() async {
       '/map': (context) => MapZone(),
       '/home': (context) => BottomNavigation(),
       '/productinfo': (context) => ProductDetail(),
-      '/category': (context) => CategoryItems()
+      '/category': (context) => CategoryItems(),
     },
   ));
 }
