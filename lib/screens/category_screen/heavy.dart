@@ -75,7 +75,7 @@ class _HeavyState extends State<Heavy> {
                           Text(lstProduct[index].name.toString(),
                               style: textStyle),
                           Text(
-                            lstProduct[index].description.toString(),
+                            lstProduct[index].price.toString(),
                             style: textStyle,
                           ),
                         ],

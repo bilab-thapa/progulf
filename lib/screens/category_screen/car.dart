@@ -76,7 +76,7 @@ class _CarState extends State<Car> {
                           Text(lstProduct[index].name.toString(),
                               style: textStyle),
                           Text(
-                            lstProduct[index].category.toString(),
+                            lstProduct[index].price.toString(),
                             style: textStyle,
                           ),
                         ],
