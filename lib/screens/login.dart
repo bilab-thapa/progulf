@@ -1,8 +1,10 @@
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:motion_toast/motion_toast.dart';
 import 'package:progulf/repository/user_repository.dart';
+import 'package:progulf/utils/controller.dart';
 import 'package:progulf/utils/splash.dart';
 import 'package:progulf/utils/url.dart';
 
@@ -14,6 +16,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final CartController controller = Get.put(CartController());
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();

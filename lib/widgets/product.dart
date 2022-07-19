@@ -26,7 +26,7 @@ class _ProductAllState extends State<ProductAll> {
             List<Product> lstProduct = snapshot.data!.data!;
             return ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: snapshot.data!.data!.length,
+              itemCount: 6,
               itemBuilder: (context, index) {
                 return InkWell(
                   onTap: () => Navigator.of(context)

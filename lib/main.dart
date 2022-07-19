@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:progulf/screens/about_webview_page.dart';
+import 'package:progulf/screens/category_items.dart';
 import 'package:progulf/screens/detail_product_screen.dart';
 import 'package:progulf/screens/forgotpw.dart';
 import 'package:progulf/screens/login.dart';
@@ -41,7 +42,8 @@ void main() async {
       '/forgot': (context) => ForgotPassword(),
       '/map': (context) => MapZone(),
       '/home': (context) => BottomNavigation(),
-      '/productinfo': (context) => ProductDetail()
+      '/productinfo': (context) => ProductDetail(),
+      '/category': (context) => CategoryItems()
     },
   ));
 }

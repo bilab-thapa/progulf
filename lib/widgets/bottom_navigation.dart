@@ -1,6 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:progulf/screens/cart.dart';
+import 'package:progulf/screens/cart/cart_button.dart';
 import 'package:progulf/screens/home_screen.dart';
 import 'package:progulf/screens/message.dart';
 import 'package:progulf/screens/profile.dart';
@@ -20,10 +20,10 @@ class _BottomNavigationState extends State<BottomNavigation> {
 
   final screens = [
     ProfileScreen(),
-    Message(),
+    MessageScreen(),
     HomeScreen(),
     Favourite(),
-    Cart()
+    CartScreen(),
   ];
   @override
   Widget build(BuildContext context) {

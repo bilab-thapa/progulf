@@ -13,7 +13,7 @@ class ProductDetail extends StatefulWidget {
 }
 
 class _ProductDetailState extends State<ProductDetail> {
-  final MyController c = Get.put(MyController());
+  final CartController cartController = Get.put(CartController());
   late Box box2;
   List<String> id = [];
   @override
@@ -152,46 +152,46 @@ class _ProductDetailState extends State<ProductDetail> {
                 ),
               ),
               SizedBox(height: height * 0.02),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CircleAvatar(
-                    backgroundColor: Colors.red,
-                    child: IconButton(
-                      onPressed: () {
-                        c.decreament();
-                      },
-                      icon: Icon(
-                        Icons.remove,
-                        size: 25,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 20),
-                  Obx(
-                    (() => Text(
-                          "${c.items.toString()}",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
-                        )),
-                  ),
-                  SizedBox(width: 20),
-                  CircleAvatar(
-                    backgroundColor: Colors.green,
-                    child: IconButton(
-                      onPressed: () {
-                        c.increament();
-                      },
-                      icon: Icon(
-                        Icons.add,
-                        size: 25,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     CircleAvatar(
+              //       backgroundColor: Colors.red,
+              //       child: IconButton(
+              //         onPressed: () {
+              //           c.decreament();
+              //         },
+              //         icon: Icon(
+              //           Icons.remove,
+              //           size: 25,
+              //           color: Colors.white,
+              //         ),
+              //       ),
+              //     ),
+              //     SizedBox(width: 20),
+              //     Obx(
+              //       (() => Text(
+              //             "${c.items.toString()}",
+              //             style: TextStyle(
+              //                 fontSize: 20, fontWeight: FontWeight.bold),
+              //           )),
+              //     ),
+              //     SizedBox(width: 20),
+              //     CircleAvatar(
+              //       backgroundColor: Colors.green,
+              //       child: IconButton(
+              //         onPressed: () {
+              //           c.increament();
+              //         },
+              //         icon: Icon(
+              //           Icons.add,
+              //           size: 25,
+              //           color: Colors.white,
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              // ),
               SizedBox(height: height * 0.02),
               Container(
                 height: height * 0.17,
@@ -255,7 +255,9 @@ class _ProductDetailState extends State<ProductDetail> {
                         ),
                       ),
                       onTap: () {
-                        Get.snackbar("Product", "Successfully Added to Cart");
+                        cartController.addProduct(lstProduct);
+                        Get.snackbar(lstProduct.name.toString(),
+                            "Successfully Added to Cart");
                       },
                     ),
                   ],

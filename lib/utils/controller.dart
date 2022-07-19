@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../model/product.dart';
+
 class MyController extends GetxController {
   var items = 1.obs;
 
@@ -20,15 +22,43 @@ class MyController extends GetxController {
   }
 }
 
-// class ControllerP extends GetxController {
-//   List<String> product = ['a'];
+class UserName extends GetxController {
+  String userName = '';
 
-//   increament(name) {
-//     product + [name];
-//   }
+  addName(name) {
+    userName = name;
+  }
+}
 
-//   containCheck(name) {
-//     product.contains(name);
-//     // debugPrint(product.toString());
-//   }
-// }
+class CartController extends GetxController {
+  var _product = {}.obs;
+
+  void addProduct(Product product) {
+    if (_product.containsKey(product)) {
+      _product[product] += 1;
+    } else {
+      _product[product] = 1;
+    }
+  }
+
+  get product => _product;
+
+  void removeProduct(Product product) {
+    if (_product.containsKey(product) && _product[product] == 1) {
+      _product.removeWhere((key, value) => key == product);
+    } else {
+      _product[product] -= 1;
+    }
+  }
+
+  get productSubTotal => _product.entries
+      .map((product) => product.key.price * product.value)
+      .toList();
+
+  get total => _product.entries
+      // .map((product) => int.parse(product.key.price) * int.parse(product.value))
+      .map((product) => int.parse(product.key.price) * product.value)
+      .toList()
+      .reduce((value, element) => value + element)
+      .toString();
+}

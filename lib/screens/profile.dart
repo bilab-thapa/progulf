@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import '../repository/user_repository.dart';
 import '../response/user_response.dart';
+import '../utils/controller.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -12,6 +14,7 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  final UserName uname = Get.put(UserName());
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<UserResponse>(
@@ -20,6 +23,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
         if (snapshot.connectionState == ConnectionState.done) {
           if (snapshot.data != null) {
             UserResponse userResponse = snapshot.data!;
+            final userName = userResponse.username;
+            uname.addName(userName);
             return SafeArea(
               child: SingleChildScrollView(
                 child: Column(

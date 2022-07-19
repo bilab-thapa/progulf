@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:progulf/screens/category_items.dart';
 
 class Category extends StatefulWidget {
   Category({Key? key}) : super(key: key);
@@ -18,103 +20,105 @@ class _CategoryState extends State<Category> {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          SizedBox(width: 10),
-          Container(
-            height: height * 0.15,
-            width: width * 0.3,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(60),
-              color: Colors.red,
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(60),
-              child: Image(
-                image: AssetImage('assets/2wheel.jpg'),
-                fit: BoxFit.cover,
+          SizedBox(width: width * 0.03),
+          InkWell(
+            onTap: () =>
+                Get.to(() => (CategoryItems()), arguments: "2wheelers"),
+            child: Container(
+              height: height * 0.15,
+              width: width * 0.3,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(60),
+                color: Colors.red,
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(60),
+                child: Image(
+                  image: AssetImage('assets/2wheel.jpg'),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
-          SizedBox(width: 10),
-          Container(
-            height: height * 0.15,
-            width: width * 0.3,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(60),
-              color: Colors.red,
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(60),
-              child: Image(
-                image: AssetImage('assets/3wheel.jpg'),
-                fit: BoxFit.cover,
+          SizedBox(width: width * 0.03),
+          InkWell(
+            onTap: () =>
+                Get.to(() => (CategoryItems()), arguments: "3wheelers"),
+            child: Container(
+              height: height * 0.15,
+              width: width * 0.3,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(60),
+                color: Colors.red,
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(60),
+                child: Image(
+                  image: AssetImage('assets/3wheel.jpg'),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
-          SizedBox(width: 10),
-          Container(
-            height: height * 0.15,
-            width: width * 0.3,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(60),
-              color: Colors.red,
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(60),
-              child: Image(
-                image: AssetImage('assets/4wheel.jpg'),
-                fit: BoxFit.cover,
+          SizedBox(width: width * 0.03),
+          InkWell(
+            onTap: () =>
+                Get.to(() => (CategoryItems()), arguments: "4wheelers"),
+            child: Container(
+              height: height * 0.15,
+              width: width * 0.3,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(60),
+                color: Colors.red,
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(60),
+                child: Image(
+                  image: AssetImage('assets/4wheel.jpg'),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
-          SizedBox(width: 10),
-          Container(
-            height: height * 0.15,
-            width: width * 0.3,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(60),
-              color: Colors.red,
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(60),
-              child: Image(
-                image: AssetImage('assets/hydraulic.jpg'),
-                fit: BoxFit.cover,
+          SizedBox(width: width * 0.03),
+          InkWell(
+            onTap: () => Get.to(() => (CategoryItems()), arguments: "heavy"),
+            child: Container(
+              height: height * 0.15,
+              width: width * 0.3,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(60),
+                color: Colors.red,
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(60),
+                child: Image(
+                  image: AssetImage('assets/hydraulic.jpg'),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
-          SizedBox(width: 10),
-          Container(
-            height: height * 0.15,
-            width: width * 0.3,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(60),
-              color: Colors.red,
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(60),
-              child: Image(
-                image: AssetImage('assets/grease.jpeg'),
-                fit: BoxFit.cover,
+          SizedBox(width: width * 0.03),
+          InkWell(
+            onTap: () => Get.to(() => (CategoryItems()), arguments: "parts"),
+            child: Container(
+              height: height * 0.15,
+              width: width * 0.3,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(60),
+                color: Colors.red,
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(60),
+                child: Image(
+                  image: AssetImage('assets/parts.jpeg'),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
-          SizedBox(width: 10),
-          Container(
-            height: height * 0.15,
-            width: width * 0.3,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(60),
-              color: Colors.red,
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(60),
-              child: Image(
-                image: AssetImage('assets/parts.jpeg'),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-          SizedBox(width: 10),
+          SizedBox(width: width * 0.04),
         ],
       ),
     );

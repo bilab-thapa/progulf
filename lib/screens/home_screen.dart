@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:progulf/widgets/categories.dart';
 import 'package:progulf/widgets/product.dart';
+
+import '../utils/controller.dart';
 
 // ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
   var size, height, width;
-
+  final UserName uname = Get.put(UserName());
   @override
   Widget build(BuildContext context) {
     size = MediaQuery.of(context).size;
@@ -69,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                         //mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
-                            "Welcome Bilab",
+                            "Welcome" + " " + uname.userName.toUpperCase(),
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 30,
