@@ -1,6 +1,6 @@
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:progulf/screens/head/about_webview_page.dart';
 import 'package:progulf/screens/category_screen/category_items.dart';
@@ -17,6 +17,7 @@ import 'model/favourite.dart';
 void main() async {
   await Hive.initFlutter();
   WidgetsFlutterBinding.ensureInitialized();
+
   final appDocumentDir = await getApplicationDocumentsDirectory();
   Hive
     ..init(appDocumentDir.path)

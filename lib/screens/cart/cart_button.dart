@@ -14,7 +14,13 @@ class CartScreen extends StatelessWidget {
     return Column(
       children: [
         CartProduct(),
-        CartTotal(),
+        controller.product != null
+            ? Container(
+                height: 100,
+                width: double.infinity,
+                child: CartTotal(),
+              )
+            : Text('no element')
       ],
     );
   }

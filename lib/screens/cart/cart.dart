@@ -49,17 +49,19 @@ class CartProductScreen extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(left: 10, right: 10, top: 50),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CircleAvatar(
-            radius: 40,
+            radius: 50,
             backgroundImage: NetworkImage(
                 'http://10.0.2.2:8080/' + product.image.toString()),
           ),
-          SizedBox(width: width * 0.1),
+          // SizedBox(width: width * 0.1),
           Text(
             product.name.toString(),
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
-          SizedBox(width: width * 0.2),
+          // SizedBox(width: width * 0.2),
           IconButton(
               onPressed: () {
                 controller.removeProduct(product);

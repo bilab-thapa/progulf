@@ -41,10 +41,12 @@ class UserApi {
           "password": password,
         },
       );
+      debugPrint(response.statusCode.toString());
 
       if (response.statusCode == 200) {
         LoginResponse loginResponse = LoginResponse.fromJson(response.data);
         token = loginResponse.token;
+
         isLogin = true;
       }
     } catch (e) {

@@ -37,17 +37,19 @@ class CartTotal extends StatelessWidget {
             ),
             SizedBox(height: 5),
             SizedBox(
-                height: 50,
-                width: double.infinity,
-                child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(primary: Colors.white),
-                    onPressed: () {
-                      Get.to(PaymentScreen());
-                    },
-                    child: Text(
-                      'Proceed to Checkout',
-                      style: TextStyle(color: Colors.deepOrange, fontSize: 28),
-                    )))
+              height: 50,
+              width: double.infinity,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(primary: Colors.white),
+                onPressed: () {
+                  Get.to(PaymentScreen());
+                },
+                child: Text(
+                  'Proceed to Checkout',
+                  style: TextStyle(color: Colors.deepOrange, fontSize: 28),
+                ),
+              ),
+            ),
           ],
         ));
   }

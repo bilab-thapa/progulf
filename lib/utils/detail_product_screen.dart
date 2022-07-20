@@ -14,6 +14,7 @@ class ProductDetail extends StatefulWidget {
 
 class _ProductDetailState extends State<ProductDetail> {
   final CartController cartController = Get.put(CartController());
+  final UserName name = Get.put(UserName());
   late Box box2;
   List<String> id = [];
   @override
@@ -45,7 +46,7 @@ class _ProductDetailState extends State<ProductDetail> {
 
     @override
     void createBox() async {
-      box2 = await Hive.openBox('favourite');
+      box2 = await Hive.openBox('favourite' + name.userName);
       placeData();
     }
 

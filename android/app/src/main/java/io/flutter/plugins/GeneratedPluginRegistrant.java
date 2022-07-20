@@ -16,6 +16,11 @@ public final class GeneratedPluginRegistrant {
   private static final String TAG = "GeneratedPluginRegistrant";
   public static void registerWith(@NonNull FlutterEngine flutterEngine) {
     try {
+      flutterEngine.getPlugins().add(new com.cindyu.all_sensors2.AllSensorsPlugin());
+    } catch(Exception e) {
+      Log.e(TAG, "Error registering plugin all_sensors2, com.cindyu.all_sensors2.AllSensorsPlugin", e);
+    }
+    try {
       flutterEngine.getPlugins().add(new me.carda.awesome_notifications.AwesomeNotificationsPlugin());
     } catch(Exception e) {
       Log.e(TAG, "Error registering plugin awesome_notifications, me.carda.awesome_notifications.AwesomeNotificationsPlugin", e);

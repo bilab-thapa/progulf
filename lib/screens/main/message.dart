@@ -26,7 +26,7 @@ class _MessageScreenState extends State<MessageScreen>
       appBar: AppBar(
         backgroundColor: Colors.teal,
         title: Text(
-          'ProGulf Help',
+          'ProGulf Help Center',
           style: TextStyle(fontSize: 28),
         ),
         centerTitle: true,
@@ -111,12 +111,12 @@ class _MessageScreenState extends State<MessageScreen>
             child: new TextField(
               controller: _txtControllerMessage,
               onSubmitted: _onSubmitMessage,
-              decoration: new InputDecoration.collapsed(hintText: "message..."),
+              decoration: new InputDecoration.collapsed(hintText: "Message..."),
             ),
           ),
           new Container(
             child: new IconButton(
-                icon: Icon(Icons.send, color: Colors.blue[400]),
+                icon: Icon(Icons.send, color: Colors.deepOrange),
                 onPressed: _sendMessage),
           )
         ],
@@ -168,7 +168,8 @@ class ChatMessage extends StatelessWidget {
           children: <Widget>[
             Container(
               margin: EdgeInsets.all(7.0),
-              child: new CircleAvatar(
+              child: CircleAvatar(
+                radius: 28,
                 child: Image(
                   image: NetworkImage(
                     ('https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-hipster-vector-stock-91462914.jpg'),
@@ -177,16 +178,16 @@ class ChatMessage extends StatelessWidget {
                 ),
               ),
             ),
-            new Expanded(
+            Expanded(
               child: new Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  new Text(
+                  Text(
                     uname.userName.toUpperCase(),
-                    style: Theme.of(context).textTheme.subtitle1,
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  new Container(
-                    child: new Text(message),
+                  Container(
+                    child: Text(message),
                   )
                 ],
               ),

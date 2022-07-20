@@ -1,5 +1,11 @@
+import 'dart:async';
+
+import 'package:all_sensors2/all_sensors2.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+
+import '../../utils/controller.dart';
 
 class Favourite extends StatefulWidget {
   const Favourite({Key? key}) : super(key: key);
@@ -9,26 +15,36 @@ class Favourite extends StatefulWidget {
 }
 
 class _FavouriteState extends State<Favourite> {
+  final UserName uName = Get.put(UserName());
+
   @override
   void initState() {
+    _streamSubscription.add(accelerometerEvents!.listen((event) {
+      setState(() {
+        _accelerometerValues = <double>[event.x, event.y, event.z];
+      });
+    }));
     super.initState();
     openBox();
   }
 
-  var box2 = Hive.box('favourite');
   openBox() async {
-    await Hive.openBox('favourite');
+    await Hive.openBox('favourite' + uName.userName);
   }
 
-  _deleteInfo(int index) {
-    box2.deleteAt(index);
-    print('Item deleted from box at index: $index');
-  }
+  List<double> _accelerometerValues = <double>[];
+  final List<StreamSubscription<dynamic>> _streamSubscription =
+      <StreamSubscription<dynamic>>[];
 
   @override
   Widget build(BuildContext context) {
+    var box2 = Hive.box('favourite' + uName.userName);
+    final List<String> accelerometer =
+        _accelerometerValues.map((double v) => v.toStringAsFixed(1)).toList();
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
+    var x = accelerometer[0];
+
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -55,6 +71,9 @@ class _FavouriteState extends State<Favourite> {
               itemCount: box.length,
               itemBuilder: (context, index) {
                 var data = box2.getAt(index)!;
+                if (double.parse(x) > 20) {
+                  box2.clear();
+                }
                 return Container(
                   margin: EdgeInsets.all(10),
                   height: height * 0.3,
@@ -95,7 +114,7 @@ class _FavouriteState extends State<Favourite> {
                       Align(
                         alignment: Alignment.topRight,
                         child: IconButton(
-                          onPressed: () => _deleteInfo(index),
+                          onPressed: () => box2.deleteAt(index),
                           icon: Icon(
                             Icons.delete,
                             size: 36,
