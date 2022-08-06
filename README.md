@@ -205,6 +205,3 @@ Data transport is made possible via state management within the program. Additio
 
 <p align = "justify">Wrike.com. 2022. What Is Agile Methodology in Project Management?. [online] Available at: <https://www.wrike.com/project-management-guide/faq/what-is-agile-methodology-in-project-management/> [Accessed 1 August 2022].</p>
 
-
-
-![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https://github.com/Tanu-N-Prabhu/Python)
