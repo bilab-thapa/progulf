@@ -207,5 +207,4 @@ Data transport is made possible via state management within the program. Additio
 
 
 
-
-![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https://github.com/bilab-thapa/progulf)
+![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https://github.com/Tanu-N-Prabhu/Python)
